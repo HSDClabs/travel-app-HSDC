@@ -8,7 +8,7 @@
 }
 
 html{
-  background-color: #93B1A7;
+  background-color: white
 }
 
 body {
@@ -20,67 +20,202 @@ button{
   font-family: Poppins;
 }
 
-img{
-  width: 400px;
-  height: auto;
-}
 
-#login-wrapper{
-  justify-content: center;
-}
-#login-text{
-
-  flex-flow: column nowrap;
-  width: 250px;
-  padding: 10px;
-
-}
-#login-text input{
-  margin: 10px;
-}
-
-#login-text button{
-  width: 150px;
-  align-self: center;
-  margin-top: 10px;
-}
-
-#main-sign-up {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-}
-
-#main-sign-up:hover {
-  text-decoration: underline;
-}
-
-header {
+// LOGIN / LANDING PAGE
+#login-page {
+  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
-  padding: 20px 0;
-  background-color: aliceblue;
-  box-shadow: 2px 2px 5px black;
+  background-image: url("../assets/plane-window.jpg");
+  background-size: cover;
+
+  #login-wrapper {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(103, 155, 201, 0.5);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black, -1px -1px 5px black;
+
+    h1, h3, h4 {
+      text-align: center;
+    }
+
+    #login-form {
+      justify-content: space-evenly;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input[type=text],
+      input[type=password] {
+        background: rgb(56, 91, 121);
+        color: ghostwhite;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        text-align:center;
+      }
+
+      input::placeholder {
+        color: rgb(190, 190, 190);
+        text-align:center;
+      }
+
+      button {
+        background: rgb(38, 70, 97);
+        color: ghostwhite;
+        width: 100px;
+        border:none;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: rgb(79, 127, 168);
+        transition-duration: 0.5s;
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}
+
+// SIGNUP PAGE
+#signup-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/plane-window.jpg");
+  background-size: cover;
+
+  #signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 270px;
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(103, 155, 201, 0.5);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black, -1px -1px 5px black;
+
+    input[type=text],
+      input[type=password] {
+        background: rgb(56, 91, 121);
+        color: ghostwhite;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        text-align:center;
+      }
+
+      input::placeholder {
+        color: rgb(190, 190, 190);
+        text-align:center;
+      }
+
+      button {
+        background: rgb(38, 70, 97);
+        color: ghostwhite;
+        width: 100px;
+        border:none;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: rgb(79, 127, 168);
+        transition-duration: 0.5s;
+        transform: scale(1.1, 1.1);
+      }
+  }
+}
+
+// USER DASHBOARD
+.user-page {
+  height: 100vh;
+  background-image: url('../assets/antique-globe.jpg');
+  background-size: cover;
+
+  header {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: rgba(56, 110, 158, 0.75);
+    color: ghostwhite;
+    box-shadow: 2px 2px 5px black;
+
+    nav {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      min-width: 30vw;
+      max-width: 50vw;
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+    
+      input[type=text] {
+            background: rgb(56, 91, 121);
+            color: ghostwhite;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            text-align:center;
+
+          }
+
+          input::placeholder {
+            color: rgb(190, 190, 190);
+            text-align:center;
+          }
+
+          button {
+            background: rgb(38, 70, 97);
+            color: ghostwhite;
+            padding: 10px;
+            border:none;
+            border-radius: 10px;
+            margin-left: 20px;
+          }
+
+          button:hover {
+            background-color: rgb(79, 127, 168);
+            transition-duration: 0.5s;
+            transform: scale(1.1, 1.1);
+          }
+        }
+  }
 }
 
 .card-container {
   max-width: 1000px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
 
   .card-item {
     margin: 10px;
     border: 1px solid black;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px black;
-    background-color: aliceblue;
+    background-color: rgba(103, 155, 201, 0.7);
+    color:white;
     
     img {
       width: 300px;
       height: 200px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
     }
 
     .card-info {
