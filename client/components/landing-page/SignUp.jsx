@@ -40,8 +40,8 @@ const SignUp = (props) => {
         }>
         {/* signup textboxes and buttons rendered */}
           <h4>Please input a unique username and password.</h4>
-          <input type="text" placeholder="New Username" />
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="New Username" requried />
+          <input type="password" placeholder="Password" required />
           <button type="submit">Sign up</button>
       </form>
     </div>
