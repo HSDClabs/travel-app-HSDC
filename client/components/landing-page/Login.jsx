@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -14,8 +15,10 @@ const Login = (props) => {
   // and calls a POST request to the backend containing both, which will return a bool
   // bool is evaluated to determine if login was successful (UN and PW match).
   return (
-    <div id='login-wrapper' className='flex'>
-      <form
+    <div id='login-wrapper'>
+      <h1 id='main-welcome-title'>Hello</h1>
+      <h3>Please login</h3>
+      <form id="login-form"
         onSubmit={(e) => {
           e.preventDefault();
           const username = e.target[0].value;
@@ -49,11 +52,13 @@ const Login = (props) => {
         }
         }>
         {/* login and password textboxes and buttons */}
-        <div id="login-text" className="flex">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-        </div>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Login</button>
+        <h4>OR</h4>
+        <Link id='main-sign-up' to='/signup'>
+          <button type="button">Sign Up</button>
+        </Link>
       </form>
     </div>
   );
