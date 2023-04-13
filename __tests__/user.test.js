@@ -32,7 +32,7 @@ describe("POST /api/user/login", () => {
             username: 'root',
             password: 'obaga'
         })
-        // expect(res.status).toBe(200);
+        expect(res.status).toBe(200);
         expect(res.body).toBe(false);
     });
     it("should return error for improper login", async () => {

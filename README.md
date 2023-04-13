@@ -1,4 +1,4 @@
-# Everyday is a Saturday
+# UrbanXplorer
 Welcome to our Tourism App! Where we think everyday should be a Saturday. This app is designed to help you plan your next vacation and explore the world. We like to think that a great day consits of 6 core pillars.
 
 * A good cup of coffee
@@ -19,4 +19,4 @@ Using the Yelp API we are able to generate local favourites based on dynamicly u
 ## Feedback and Support
 If you have any feedback or need support, please don't hesitate to contact us. You can send an email to support@HSDCplanner.com or use the in-app feedback feature.
 
-Thank you for using EDIAS! We hope you have an amazing trip.
+Thank you for using UrbanXplorer! We hope you have an amazing trip.

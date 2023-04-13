@@ -1,4 +1,5 @@
 const locationController = {};
+const locationNum = 20;
 
 const options = {
 	method: 'GET',
@@ -14,7 +15,7 @@ locationController.getRestaurants = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=resturants&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=resturants&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
@@ -44,7 +45,7 @@ locationController.getCoffeeShops = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=coffee&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=coffee&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
@@ -74,7 +75,7 @@ locationController.getActivities = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=activity&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=activity&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
@@ -104,7 +105,7 @@ locationController.getParks = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=park&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=park&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
@@ -134,7 +135,7 @@ locationController.getBars = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=bar&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=bar&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
@@ -164,7 +165,7 @@ locationController.getComedy = async function (req, res, next) {
 	try {
 		const { location } = req.params;
 		const response = await fetch(
-			`https://api.yelp.com/v3/businesses/search?location=${location}&term=comedy&sort_by=best_match&limit=10`,
+			`https://api.yelp.com/v3/businesses/search?location=${location}&term=comedy&sort_by=best_match&limit=${locationNum}`,
 			options
 		);
 		const data = await response.json();
