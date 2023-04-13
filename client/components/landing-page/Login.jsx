@@ -52,8 +52,8 @@ const Login = (props) => {
         }
         }>
         {/* login and password textboxes and buttons */}
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Username" required/>
+        <input type="password" placeholder="Password" required/>
         <button type="submit">Login</button>
         <h4>OR</h4>
         <Link id='main-sign-up' to='/signup'>

@@ -104,6 +104,10 @@ button{
     border-radius: 10px;
     box-shadow: 2px 2px 5px black, -1px -1px 5px black;
 
+    h4 {
+      text-align: center;
+    }
+
     input[type=text],
       input[type=password] {
         background: rgb(56, 91, 121);
