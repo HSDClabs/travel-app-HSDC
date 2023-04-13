@@ -5,6 +5,7 @@ const Card = (props) => {
   // pulled from props passed down via the query to backend in nav-bar
   return (
     <div className='card-item'>
+      <h3>{props.cardHeading}</h3>
       <img src={`${props.cardInfo.image}`} />
       <div className='card-info'>
         <h3>{props.cardInfo.name}</h3>

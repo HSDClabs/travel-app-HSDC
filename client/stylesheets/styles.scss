@@ -20,7 +20,6 @@ button{
   font-family: Poppins;
 }
 
-
 // LOGIN / LANDING PAGE
 #login-page {
   height: 100vh;
@@ -138,12 +137,13 @@ button{
 
 // USER DASHBOARD
 .user-page {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   background-image: url('../assets/antique-globe.jpg');
   background-size: cover;
 
   header {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 20px 0;
     background-color: rgba(56, 110, 158, 0.75);
     color: ghostwhite;
@@ -155,7 +155,7 @@ button{
       flex-direction: row;
       justify-content: space-between;
       min-width: 30vw;
-      max-width: 50vw;
+      max-width: 1100px;
     }
 
     form {
@@ -193,34 +193,36 @@ button{
           }
         }
   }
-}
 
-.card-container {
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
-
-  .card-item {
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    background-color: rgba(103, 155, 201, 0.7);
-    color:white;
-    
-    img {
+  .card-container {
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  
+    .card-item {
       width: 300px;
-      height: 200px;
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
-    }
-
-    .card-info {
-      padding: 10px;
+      margin: 20px;
+      padding: 10px 10px 0 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px black;
+      background-color: rgba(103, 155, 201, 0.7);
+      color:white;
+      
+      img {
+        width: 100%;
+        height: 180px;
+        border: 1px solid black;
+      }
+  
+      .card-info {
+        padding: 10px;
+      }
     }
   }
 }
+
 

@@ -12,22 +12,28 @@ const CardContainer = (props) => {
   const cardArr = [];
 
   if (props.location.coffeeInfo) {
-    cardArr.push(<Card cardInfo={props.location.coffeeInfo[props.location.coffeeInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.coffeeInfo[randomGenerator(props.location.coffeeInfo.length - 1)]} 
+      cardHeading="Coffee"/>);
   }
   if (props.location.parkInfo) {
-    cardArr.push(<Card cardInfo={props.location.parkInfo[props.location.parkInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.parkInfo[randomGenerator(props.location.parkInfo.length - 1)]}
+      cardHeading="Parks" />);
   }
   if (props.location.activityInfo) {
-    cardArr.push(<Card cardInfo={props.location.activityInfo[props.location.activityInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.activityInfo[randomGenerator(props.location.activityInfo.length - 1)]}
+      cardHeading="Activities" />);
   }
   if (props.location.restaurantInfo) {
-    cardArr.push(<Card cardInfo={props.location.restaurantInfo[props.location.restaurantInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.restaurantInfo[randomGenerator(props.location.restaurantInfo.length - 1)]}
+      cardHeading="Restaurant" />);
   }
   if (props.location.barInfo) {
-    cardArr.push(<Card cardInfo={props.location.barInfo[props.location.barInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.barInfo[randomGenerator(props.location.barInfo.length - 1)]}
+      cardHeading="Night Life" />);
   }
   if (props.location.comedyInfo) {
-    cardArr.push(<Card cardInfo={props.location.comedyInfo[props.location.comedyInfo.length - 1]} />);
+    cardArr.push(<Card cardInfo={props.location.comedyInfo[randomGenerator(props.location.comedyInfo.length - 1)]}
+      cardHeading="Comedy" />);
   }
 
 
