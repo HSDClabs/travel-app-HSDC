@@ -7,7 +7,7 @@
 		"start": "NODE_ENV=production node ./server/server.js",
 		"build": "NODE_ENV=production webpack",
 		"dev": "NODE_ENV=development webpack serve --open & NODE_ENV=development nodemon server/server.js",
-		"test": "cross-env NODE_ENV=test jest --testTimeout=5000"
+		"test": "cross-env NODE_ENV=test jest --watchAll --detectOpenHandles"
 	},
 	"repository": {
 		"type": "git",

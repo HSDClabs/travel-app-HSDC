@@ -1,14 +1,19 @@
 const request = require("supertest");
 const server = require('../server/server');
 
-xdescribe('POST api/location', () => {
-    let authToken = 'Bearer OmgJFQk8VBZfv0zC6St4qG5X1zfA694YbdWZlvFmF09GAU9vSgR56VG0g7FpjJf2XHGqO6kfeypyDcrKMkLMo_CzP4ED7v9XXodQazsa_YYnXIpy-kRkjs9z-DE0ZHYx'
-    it('POST /api/users should return 200 with authentication', async () => {
+
+describe('POST api/location', () => {
+    it('POST /api/users should return 200, with city info after city input', async () => {
         const res = await request(server).post("/api/location/tokyo").send({
             "location":"tokyo"
-        }).
+        })
         expect(res.status).toBe(200);
-        expect(res.body).toBeInstanceOf(Object)
+        expect(res.body.activityInfo).not.toBe(undefined);
+        expect(res.body.coffeeInfo).not.toBe(undefined);
+        expect(res.body.parkInfo).not.toBe(undefined);
+        expect(res.body.restaurantInfo).not.toBe(undefined);
+        expect(res.body.barInfo).not.toBe(undefined);
+        expect(res.body.comedyInfo).not.toBe(undefined);
     });
-});
 
+});

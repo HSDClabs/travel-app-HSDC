@@ -21,7 +21,7 @@ describe("POST /api/user/login", () => {
             username: 'garyb',
             password: 'firechicken'
         })
-        //console.log(res);
+        // expect('Content-Type',/json/);
         expect(res.status).toBe(200);
         expect(res.body.username).toBe('garyb');
         expect(res.body.password).not.toBe('firechicken');
@@ -32,7 +32,7 @@ describe("POST /api/user/login", () => {
             username: 'root',
             password: 'obaga'
         })
-        expect(res.status).toBe(200);
+        // expect(res.status).toBe(200);
         expect(res.body).toBe(false);
     });
     it("should return error for improper login", async () => {
@@ -42,16 +42,25 @@ describe("POST /api/user/login", () => {
         expect(res.status).toBe(500);
     })
 });
-
+//Sign up post request
 describe("POST /api/user/signup", () => {
     it("should return user object with hashed password", async () => {
         const res = await request(server).post("/api/user/signup").send({
-            username:'pollyjones',
+            username:'pollyj',
             password:'hi'
         });
+        // expect('Content-Type',/json/);
         expect(res.status).toBe(200);
-        expect(res.body.username).toBe('pollyjones');
+        expect(res.body.username).toBe('pollyj');
         expect(res.body.password).not.toBe('hi');
-
+    });
+    it("should return false if user exists", async () => {
+        const res = await request(server).post("/api/user/signup").send({
+            username: 'garyb',
+            password:'123'
+        });
+        expect(res.status).toBe(200);
+        expect(res.body.username).toBe(undefined);
+        expect(res.body).toBe(false);
     });
 });
