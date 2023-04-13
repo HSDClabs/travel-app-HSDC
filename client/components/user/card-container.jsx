@@ -4,7 +4,8 @@ import Card from './card';
 const CardContainer = (props) => {
   // props contains name, image, review_count, rating,address, price $
 
-  const cache = { coffee: null, parks: null, activity: null, restaurant: null, bar: null, comedy: null };
+  const cache = { coffee: null, park: null, activity: null, restaurant: null, bar: null, comedy: null };
+  console.log(cache);
 
   // const [restaurants, setRestaurants] = useState(props.location.restaurantInfo)
   const randomGenerator = (num, caller) => {
