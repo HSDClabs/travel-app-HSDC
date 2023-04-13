@@ -1,5 +1,5 @@
 const locationController = {};
-const locationNum = 10;
+const locationNum = 20;
 
 const options = {
 	method: 'GET',
