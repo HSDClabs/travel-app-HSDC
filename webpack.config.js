@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+require("dotenv").config();
 
 module.exports = {
 	entry: './client/index.js',
@@ -13,6 +14,9 @@ module.exports = {
 		}),
 	],
 	mode: process.env.NODE_ENV,
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	},
 	module: {
 		rules: [
 			{
@@ -27,7 +31,7 @@ module.exports = {
 			},
 			{
 				test: /\.s?css/,
-				use: ['style-loader', 'css-loader'],
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},
